@@ -10,20 +10,3 @@ Export JAR file from source code or take it from the repository. Put it into <ec
 
 It also can be used for another types of files (not only for Apex classes), you have to specify appropriate file extension.
 
-Example of configuration:
-<?xml version="1.0" encoding="UTF-8"?>
-<apexcheckstyle-configuration>
-  <fileExtensions>java, cls</fileExtensions>
-  <apexcheckstyle-markers>
-    <marker>
-      <regex>.*if\(.*</regex>
-      <message>Whitespace near 'if'</message>
-      <replacement></replacement>
-    </marker>
-    <marker>
-      <regex>.*for\(.*</regex>
-      <message>Whitespace near 'for'</message>      
-    </marker>
-  </apexcheckstyle-markers>
-</apexcheckstyle-configuration>
-
