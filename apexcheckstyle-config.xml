@@ -1,15 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <apexcheckstyle-configuration>
-  <fileExtensions>java, cls</fileExtensions>
-  <apexcheckstyle-markers>
-    <marker>
-      <regex>.*if\(.*</regex>
-      <message>Whitespace near 'if'</message>
-      <replacement></replacement>
-    </marker>
-    <marker>
-      <regex>.*for\(.*</regex>
-      <message>Whitespace near 'for'</message>      
-    </marker>
-  </apexcheckstyle-markers>
+	<fileExtensions>java, cls</fileExtensions>
+	<apexcheckstyle-markers>
+
+<!-- if -->
+		<marker>
+			<regex>.*(if\().*</regex>
+			<message>Whitespace near 'if'</message>
+			<replacement>if (</replacement>
+		</marker>
+<!-- for -->
+		<marker>
+			<regex>.*(for\().*</regex>
+			<message>Whitespace near 'for'</message>
+			<replacement>for (</replacement>
+		</marker>
+<!-- while -->
+		<marker>
+			<regex>.*(while\().*</regex>
+			<message>Whitespace near 'while'</message>
+			<replacement>while (</replacement>
+		</marker>
+<!-- catch -->
+		<marker>
+			<regex>.*(catch\().*</regex>
+			<message>Whitespace near 'catch'</message>
+			<replacement>catch (</replacement>
+		</marker>
+
+<!-- SELECT -->
+		<marker>
+			<regex>.*\b((?!(?-i)SELECT)(?i)select)\b.*</regex>
+			<message>Operator syntax: SELECT</message>
+			<replacement>SELECT</replacement>
+		</marker>
+<!-- COUNT -->
+		<marker>
+			<regex>.*\b((?!(?-i)COUNT)(?i)count)\b.*</regex>
+			<message>Operator syntax: COUNT</message>
+			<replacement>COUNT</replacement>
+		</marker>
+<!-- FROM -->
+		<marker>
+			<regex>.*\b((?!(?-i)FROM)(?i)from)\b.*</regex>
+			<message>Operator syntax: FROM</message>
+			<replacement>FROM</replacement>
+		</marker>
+<!-- WHERE -->
+		<marker>
+			<regex>.*\b((?!(?-i)WHERE)(?i)where)\b.*</regex>
+			<message>Operator syntax: WHERE</message>
+			<replacement>WHERE</replacement>
+		</marker>
+<!-- ORDER BY -->
+		<marker>
+			<regex>.*\b((?!(?-i)ORDER BY)(?i)order by)\b.*</regex>
+			<message>Operator syntax: ORDER BY</message>
+			<replacement>ORDER BY</replacement>
+		</marker>
+<!-- LIMIT -->
+		<marker>
+			<regex>.*\b((?!(?-i)LIMIT)(?i)limit)\b.*</regex>
+			<message>Operator syntax: LIMIT</message>
+			<replacement>LIMIT</replacement>
+		</marker>
+
+<!-- ){ -->
+		<marker>
+			<regex>.*(\)\{).*</regex>
+			<message>Whitespace near '{'</message>
+			<replacement>) {</replacement>
+		</marker>
+<!-- else{ -->
+		<marker>
+			<regex>.*(else\{).*</regex>
+			<message>Whitespace near '{'</message>
+			<replacement>else {</replacement>
+		</marker>
+
+<!-- Id -->
+		<marker>
+			<regex>.*\b((?!(?-i)Id)(?i)id)\b.*</regex>
+			<message>Operator syntax: Id</message>
+			<replacement>Id</replacement>
+		</marker>
+<!-- Boolean -->
+		<marker>
+			<regex>.*\b((?!(?-i)Boolean)(?i)boolean)\b.*</regex>
+			<message>Operator syntax: Boolean</message>
+			<replacement>Boolean</replacement>
+		</marker>
+<!-- Integer -->
+		<marker>
+			<regex>.*\b((?!(?-i)Integer)(?i)integer)\b.*</regex>
+			<message>Operator syntax: Integer</message>
+			<replacement>Integer</replacement>
+		</marker>
+<!-- Decimal -->
+		<marker>
+			<regex>.*\b((?!(?-i)Decimal)(?i)decimal)\b.*</regex>
+			<message>Operator syntax: Decimal</message>
+			<replacement>Decimal</replacement>
+		</marker>
+<!-- Double -->
+		<marker>
+			<regex>.*\b((?!(?-i)Double)(?i)double)\b.*</regex>
+			<message>Operator syntax: Double</message>
+			<replacement>Double</replacement>
+		</marker>
+<!-- String -->
+		<marker>
+			<regex>.*\b((?!(?-i)String)(?i)string)\b.*</regex>
+			<message>Operator syntax: String</message>
+			<replacement>String</replacement>
+		</marker>
+<!-- Blob -->
+		<marker>
+			<regex>.*\b((?!(?-i)Blob)(?i)blob)\b.*</regex>
+			<message>Operator syntax: Blob</message>
+			<replacement>Blob</replacement>
+		</marker>
+<!-- SelectOption -->
+		<marker>
+			<regex>.*\b((?!(?-i)SelectOption)(?i)selectoption)\b.*</regex>
+			<message>Operator syntax: SelectOption</message>
+			<replacement>SelectOption</replacement>
+		</marker>
+
+<!-- Set -->
+		<marker>
+			<regex>.*\b((?!(?-i)Set)(?i)set\s*)\u003C.*</regex>
+			<message>Operator syntax: Set</message>
+			<replacement>Set</replacement>
+		</marker>
+<!-- List -->
+		<marker>
+			<regex>.*\b((?!(?-i)List)(?i)list\s*)\u003C.*</regex>
+			<message>Operator syntax: List</message>
+			<replacement>List</replacement>
+		</marker>
+<!-- Map -->
+		<marker>
+			<regex>.*\b((?!(?-i)Map)(?i)map\s*)\u003C.*</regex>
+			<message>Operator syntax: Map</message>
+			<replacement>Map</replacement>
+		</marker>
+
+<!-- true -->
+		<marker>
+			<regex>.*\b((?!(?-i)true)(?i)true)\b.*</regex>
+			<message>Operator syntax: true</message>
+			<replacement>true</replacement>
+		</marker>
+<!-- false -->
+		<marker>
+			<regex>.*\b((?!(?-i)false)(?i)false)\b.*</regex>
+			<message>Operator syntax: false</message>
+			<replacement>false</replacement>
+		</marker>
+<!-- NULL -->
+		<marker>
+			<regex>.*\b((?!(?-i)NULL)(?i)null)\b.*</regex>
+			<message>Operator syntax: NULL</message>
+			<replacement>NULL</replacement>
+		</marker>
+
+	</apexcheckstyle-markers>
 </apexcheckstyle-configuration>
