@@ -1,2 +1,2 @@
-salesforce-apex-checkstyle
+Salesforce Apex Checkstyle Eclipse plugin
 ==========================

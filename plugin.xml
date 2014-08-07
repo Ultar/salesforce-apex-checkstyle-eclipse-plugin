@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+       point="org.eclipse.ui.startup">
+       <startup
+           class="com.salesforce.apex.checkstyle.plugin.ApexCheckstylePluginStartup"/>
+   </extension>
+
+    <!-- Popupmenu actions to check selected files on demand -->
+    <extension
+        point="org.eclipse.ui.popupMenus">
+        <objectContribution
+            objectClass="org.eclipse.core.resources.IResource"
+            adaptable="true"
+            id="ncom.salesforce.apex.checkstyle.plugin.ondemand">
+            <menu
+                id="ApexCheckstyle.menu"
+                label="APEX Checkstyle"
+                path="additions">
+                <separator
+                    name="ondemand"/>
+            </menu>
+
+            <action
+                label="Check code"
+                class="com.salesforce.apex.checkstyle.plugin.handlers.CheckSelectedFilesAction"
+                enablesFor="+"
+                menubarPath="ApexCheckstyle.menu/ondemand"
+                tooltip="Check code"
+                id="com.salesforce.apex.checkstyle.plugin.handlers.CheckSelectedFilesAction"/>
+                
+             <action
+                label="Replace warnings"
+                class="com.salesforce.apex.checkstyle.plugin.handlers.CheckSelectedFilesAction"
+                enablesFor="+"
+                menubarPath="ApexCheckstyle.menu/ondemand"
+                tooltip="Replace warnings"
+                id="com.salesforce.apex.checkstyle.plugin.handlers.ReplaceSelectedFilesAction"/>           
+        </objectContribution>
+    </extension>
+
+    <!--
+        Marker
+    -->
+   <extension
+           id="com.salesforce.apex.checkstyle.plugin.apexCheckstyleMarker"
+		   point="org.eclipse.core.resources.markers"
+		   name="Apex Checkstyle Warning">
+		   <super type="org.eclipse.core.resources.problemmarker"/>
+		   <persistent value="true"/>
+   </extension>
+
+</plugin>
